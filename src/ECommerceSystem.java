@@ -80,7 +80,7 @@ public class ECommerceSystem {
         System.out.println("Email receipt sent to " + order.getCustomerName() + " for Order #" + order.getOrderId());
     }
 
-    // Overload 2: priority alert
+
     static void sendNotification(Order order, String priorityMessage) {
         System.out.println("[" + priorityMessage + "] Urgent notification dispatched to " + order.getCustomerName() + "!");
     }
