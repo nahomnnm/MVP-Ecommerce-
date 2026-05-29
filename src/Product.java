@@ -2,11 +2,11 @@ class Product {
     private final String productId;
     private final String name;
     private final double price;
-    private final String type;        // "physical" or "digital"
-    private double weight;      // only for physical
-    private String downloadLink; // only for digital
+    private final String type;       
+    private double weight;     
+    private String downloadLink; 
 
-    // Physical product constructor
+    
     public Product(String productId, String name, double price, double weight) {
         this.productId = productId;
         this.name = name;
@@ -15,7 +15,7 @@ class Product {
         this.weight = weight;
     }
 
-    // Digital product constructor
+   
     public Product(String productId, String name, double price, String downloadLink) {
         this.productId = productId;
         this.name = name;
