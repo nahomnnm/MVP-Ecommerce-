@@ -56,7 +56,7 @@ public class ECommerceSystem {
             order.displayOrderSummary();
             System.out.println("Total: $" + order.calculateTotal());
 
-            // V4.0 - Method Overloading: standard notification
+           
             sendNotification(order);
 
             if (order instanceof DigitalOrder) {
@@ -65,7 +65,7 @@ public class ECommerceSystem {
             } else if (order instanceof PhysicalOrder) {
                 PhysicalOrder p = (PhysicalOrder) order;
                 if (p.getShippingWeight() > 5.0) {
-                    // V4.0 - Method Overloading: priority notification
+                    
                     sendNotification(p, "HEAVY FREIGHT");
                 }
             }
@@ -75,8 +75,7 @@ public class ECommerceSystem {
         scanner.close();
     }
 
-    // V4.0 - Method Overloading (Compile-time Polymorphism)
-    // Overload 1: standard receipt
+ 
     static void sendNotification(Order order) {
         System.out.println("Email receipt sent to " + order.getCustomerName() + " for Order #" + order.getOrderId());
     }
